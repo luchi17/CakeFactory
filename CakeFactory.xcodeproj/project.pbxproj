@@ -12,7 +12,11 @@
 		BC2B60C4275161A600B16F28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B60C3275161A600B16F28 /* ViewController.swift */; };
 		BC2B60C7275161A600B16F28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC2B60C5275161A600B16F28 /* Main.storyboard */; };
 		BC2B60C9275161A900B16F28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC2B60C8275161A900B16F28 /* Assets.xcassets */; };
-		BC2B60CC275161A900B16F28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC2B60CA275161A900B16F28 /* LaunchScreen.storyboard */; };
+		BC2B60D8275164B700B16F28 /* CakeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B60D6275164B700B16F28 /* CakeCollectionViewCell.swift */; };
+		BC2B60D9275164B700B16F28 /* CakeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC2B60D7275164B700B16F28 /* CakeCollectionViewCell.xib */; };
+		BC2B60DD27516AF400B16F28 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC2B60DC27516AF400B16F28 /* SplashScreen.storyboard */; };
+		BC2B60DF27516B0500B16F28 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B60DE27516B0500B16F28 /* SplashScreenViewController.swift */; };
+		BC2B60E127516C4A00B16F28 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B60E027516C4A00B16F28 /* SplashViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +26,12 @@
 		BC2B60C3275161A600B16F28 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BC2B60C6275161A600B16F28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC2B60C8275161A900B16F28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BC2B60CB275161A900B16F28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC2B60CD275161A900B16F28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC2B60D6275164B700B16F28 /* CakeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeCollectionViewCell.swift; sourceTree = "<group>"; };
+		BC2B60D7275164B700B16F28 /* CakeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CakeCollectionViewCell.xib; sourceTree = "<group>"; };
+		BC2B60DC27516AF400B16F28 /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
+		BC2B60DE27516B0500B16F28 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		BC2B60E027516C4A00B16F28 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,67 @@
 		BC2B60BE275161A600B16F28 /* CakeFactory */ = {
 			isa = PBXGroup;
 			children = (
+				BC2B60D5275162C600B16F28 /* Features */,
 				BC2B60BF275161A600B16F28 /* AppDelegate.swift */,
 				BC2B60C1275161A600B16F28 /* SceneDelegate.swift */,
 				BC2B60C3275161A600B16F28 /* ViewController.swift */,
 				BC2B60C5275161A600B16F28 /* Main.storyboard */,
 				BC2B60C8275161A900B16F28 /* Assets.xcassets */,
-				BC2B60CA275161A900B16F28 /* LaunchScreen.storyboard */,
 				BC2B60CD275161A900B16F28 /* Info.plist */,
 			);
 			path = CakeFactory;
+			sourceTree = "<group>";
+		};
+		BC2B60D5275162C600B16F28 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				BC2B60E327516D0800B16F28 /* CakeList */,
+				BC2B60E227516CFC00B16F28 /* Splash */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		BC2B60E227516CFC00B16F28 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				BC2B60F027524F5600B16F28 /* Data */,
+				BC2B60EF27524F4000B16F28 /* Domain */,
+				BC2B60E727516DFA00B16F28 /* View */,
+				BC2B60E027516C4A00B16F28 /* SplashViewModel.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		BC2B60E327516D0800B16F28 /* CakeList */ = {
+			isa = PBXGroup;
+			children = (
+				BC2B60D6275164B700B16F28 /* CakeCollectionViewCell.swift */,
+				BC2B60D7275164B700B16F28 /* CakeCollectionViewCell.xib */,
+			);
+			path = CakeList;
+			sourceTree = "<group>";
+		};
+		BC2B60E727516DFA00B16F28 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC2B60DC27516AF400B16F28 /* SplashScreen.storyboard */,
+				BC2B60DE27516B0500B16F28 /* SplashScreenViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC2B60EF27524F4000B16F28 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		BC2B60F027524F5600B16F28 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +185,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC2B60CC275161A900B16F28 /* LaunchScreen.storyboard in Resources */,
 				BC2B60C9275161A900B16F28 /* Assets.xcassets in Resources */,
+				BC2B60D9275164B700B16F28 /* CakeCollectionViewCell.xib in Resources */,
 				BC2B60C7275161A600B16F28 /* Main.storyboard in Resources */,
+				BC2B60DD27516AF400B16F28 /* SplashScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +201,10 @@
 			files = (
 				BC2B60C4275161A600B16F28 /* ViewController.swift in Sources */,
 				BC2B60C0275161A600B16F28 /* AppDelegate.swift in Sources */,
+				BC2B60D8275164B700B16F28 /* CakeCollectionViewCell.swift in Sources */,
+				BC2B60E127516C4A00B16F28 /* SplashViewModel.swift in Sources */,
 				BC2B60C2275161A600B16F28 /* SceneDelegate.swift in Sources */,
+				BC2B60DF27516B0500B16F28 /* SplashScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,14 +217,6 @@
 				BC2B60C6275161A600B16F28 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BC2B60CA275161A900B16F28 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BC2B60CB275161A900B16F28 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -289,12 +345,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LK3S962LJ9;
+				DEVELOPMENT_TEAM = 4QM99W37M3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CakeFactory/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -302,7 +357,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mariluzparejo.CakeFactory.CakeFactory;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mariluzparejo.CakeFactoryTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -317,12 +372,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LK3S962LJ9;
+				DEVELOPMENT_TEAM = 4QM99W37M3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CakeFactory/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -330,7 +384,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mariluzparejo.CakeFactory.CakeFactory;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mariluzparejo.CakeFactoryTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
