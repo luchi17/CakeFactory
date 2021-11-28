@@ -40,7 +40,11 @@ class CakeCollectionViewCell: UICollectionViewCell {
     func configureCell(model: CakeItemModel) {
         
         titleLabel.text = model.title
-        if let image = getImage(from: model.imageUrlString){
+        
+        let image = getImage(from: model.imageUrlString)
+        imageView.image = image
+        
+        if image != nil {
             imageView.image = image
             errorLabel.isHidden = true
         } else {
