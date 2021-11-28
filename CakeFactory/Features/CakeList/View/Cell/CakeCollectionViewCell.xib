@@ -29,17 +29,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAH-Wa-ZWJ">
+                                <rect key="frame" x="12" y="12" width="223" height="139"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="cwR-hi-egd" firstAttribute="leading" secondItem="CC0-xN-isp" secondAttribute="leading" constant="12" id="5WU-sq-C4c"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1cA-Qt-D1l" secondAttribute="bottom" constant="12" id="7s3-oq-y1Y"/>
+                            <constraint firstItem="cAH-Wa-ZWJ" firstAttribute="trailing" secondItem="cwR-hi-egd" secondAttribute="trailing" id="Cfy-Jo-EOj"/>
                             <constraint firstItem="cwR-hi-egd" firstAttribute="top" secondItem="CC0-xN-isp" secondAttribute="top" constant="12" id="Fdr-BI-5qf"/>
                             <constraint firstItem="cwR-hi-egd" firstAttribute="height" secondItem="CC0-xN-isp" secondAttribute="height" multiplier="0.55" id="NsS-rI-WSg"/>
+                            <constraint firstItem="cAH-Wa-ZWJ" firstAttribute="top" secondItem="cwR-hi-egd" secondAttribute="top" id="PI1-u4-d0e"/>
+                            <constraint firstItem="cAH-Wa-ZWJ" firstAttribute="leading" secondItem="cwR-hi-egd" secondAttribute="leading" id="SKa-Bs-ByQ"/>
                             <constraint firstAttribute="trailing" secondItem="cwR-hi-egd" secondAttribute="trailing" constant="12" id="cQL-yQ-yrj"/>
                             <constraint firstItem="1cA-Qt-D1l" firstAttribute="top" secondItem="cwR-hi-egd" secondAttribute="bottom" constant="20" id="fXN-ku-jtO"/>
                             <constraint firstItem="1cA-Qt-D1l" firstAttribute="trailing" secondItem="cwR-hi-egd" secondAttribute="trailing" id="m69-rB-20A"/>
                             <constraint firstItem="1cA-Qt-D1l" firstAttribute="leading" secondItem="cwR-hi-egd" secondAttribute="leading" id="qaz-wZ-hJJ"/>
+                            <constraint firstItem="cAH-Wa-ZWJ" firstAttribute="bottom" secondItem="cwR-hi-egd" secondAttribute="bottom" id="ycn-bD-Kgw"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -54,6 +64,7 @@
             <size key="customSize" width="247" height="253"/>
             <connections>
                 <outlet property="containerView" destination="CC0-xN-isp" id="jhc-Ks-OZu"/>
+                <outlet property="errorLabel" destination="cAH-Wa-ZWJ" id="mva-h6-ABO"/>
                 <outlet property="imageView" destination="cwR-hi-egd" id="Bc8-2c-YDT"/>
                 <outlet property="titleLabel" destination="1cA-Qt-D1l" id="MqI-j5-JfK"/>
             </connections>

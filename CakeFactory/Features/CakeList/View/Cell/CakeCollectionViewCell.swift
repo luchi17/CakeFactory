@@ -12,7 +12,7 @@ class CakeCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var containerView: UIView!
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
-    
+    @IBOutlet private weak var errorLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,6 +21,8 @@ class CakeCollectionViewCell: UICollectionViewCell {
     
     func configureUI() {
         
+        errorLabel.isHidden = true
+        
         containerView.backgroundColor = .white
         containerView.layer.cornerRadius = 12.0
         
@@ -28,12 +30,24 @@ class CakeCollectionViewCell: UICollectionViewCell {
         
         titleLabel.font = UIFont(name: "GillSans-Bold", size: 13)
         titleLabel.textAlignment = .center
+        
+        errorLabel.font = UIFont(name: "GillSans-Bold", size: 14)
+        errorLabel.textAlignment = .center
+        errorLabel.numberOfLines = 0
+        errorLabel.textColor = .red
     }
     
     func configureCell(model: CakeItemModel) {
         
         titleLabel.text = model.title
-        imageView.image = getImage(from: model.imageUrlString)
+        if let image = getImage(from: model.imageUrlString){
+            imageView.image = image
+            errorLabel.isHidden = true
+        } else {
+            errorLabel.text = "Image could not be loaded"
+            errorLabel.isHidden = false
+        }
+        
     }
     
     func getImage(from string: String) -> UIImage? {
