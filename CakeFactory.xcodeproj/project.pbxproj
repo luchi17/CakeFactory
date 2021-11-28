@@ -22,6 +22,8 @@
 		BC2B6108275264AC00B16F28 /* CakeItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B6107275264AC00B16F28 /* CakeItemModel.swift */; };
 		BC2B610C27540F7A00B16F28 /* CakeListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B610B27540F7A00B16F28 /* CakeListDataSource.swift */; };
 		BC2B610F2754108200B16F28 /* CakeListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B610E2754108200B16F28 /* CakeListManager.swift */; };
+		BC2B611827542A4A00B16F28 /* CakeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B611627542A4A00B16F28 /* CakeDetailViewController.swift */; };
+		BC2B611927542A4A00B16F28 /* CakeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC2B611727542A4A00B16F28 /* CakeDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		BC2B6107275264AC00B16F28 /* CakeItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeItemModel.swift; sourceTree = "<group>"; };
 		BC2B610B27540F7A00B16F28 /* CakeListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeListDataSource.swift; sourceTree = "<group>"; };
 		BC2B610E2754108200B16F28 /* CakeListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeListManager.swift; sourceTree = "<group>"; };
+		BC2B611627542A4A00B16F28 /* CakeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeDetailViewController.swift; sourceTree = "<group>"; };
+		BC2B611727542A4A00B16F28 /* CakeDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CakeDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 		BC2B60D5275162C600B16F28 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				BC2B6110275429AE00B16F28 /* CakeDetail */,
 				BC2B60E327516D0800B16F28 /* CakeList */,
 				BC2B60E227516CFC00B16F28 /* Splash */,
 			);
@@ -158,6 +163,23 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		BC2B6110275429AE00B16F28 /* CakeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				BC2B611527542A0200B16F28 /* View */,
+			);
+			path = CakeDetail;
+			sourceTree = "<group>";
+		};
+		BC2B611527542A0200B16F28 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC2B611627542A4A00B16F28 /* CakeDetailViewController.swift */,
+				BC2B611727542A4A00B16F28 /* CakeDetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -219,6 +241,7 @@
 				BC2B60C9275161A900B16F28 /* Assets.xcassets in Resources */,
 				BC2B60D9275164B700B16F28 /* CakeCollectionViewCell.xib in Resources */,
 				BC2B60C7275161A600B16F28 /* Main.storyboard in Resources */,
+				BC2B611927542A4A00B16F28 /* CakeDetailViewController.xib in Resources */,
 				BC2B60DD27516AF400B16F28 /* SplashScreen.storyboard in Resources */,
 				BC2B60F92752612500B16F28 /* CakeListViewController.xib in Resources */,
 			);
@@ -241,6 +264,7 @@
 				BC2B6108275264AC00B16F28 /* CakeItemModel.swift in Sources */,
 				BC2B6102275261BD00B16F28 /* CakeListModel.swift in Sources */,
 				BC2B6104275262A200B16F28 /* CakeItemDataOut.swift in Sources */,
+				BC2B611827542A4A00B16F28 /* CakeDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
