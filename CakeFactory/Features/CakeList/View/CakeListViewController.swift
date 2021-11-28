@@ -107,6 +107,9 @@ extension CakeListViewController: UICollectionViewDataSource {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: CakeCollectionViewCell.self), for: indexPath) as? CakeCollectionViewCell {
             
             cell.configureCell(model: cakeItem)
+            cell.containerView.alpha = 0.0
+            cell.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+            
             return cell
         }
         
@@ -115,6 +118,17 @@ extension CakeListViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.cakeListModel.items.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+        let delay = 6.0
+        UIView.animate(withDuration: 1.5, delay: delay, options: .curveEaseInOut, animations: {
+            if let cell = cell as? CakeCollectionViewCell {
+                cell.containerView.alpha = 1
+                cell.transform = .identity
+            }
+        })
     }
     
     

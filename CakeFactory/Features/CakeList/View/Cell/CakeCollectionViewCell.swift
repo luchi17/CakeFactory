@@ -9,7 +9,7 @@ import UIKit
 
 class CakeCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet private weak var containerView: UIView!
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var errorLabel: UILabel!
