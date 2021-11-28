@@ -72,10 +72,16 @@ class CakeListViewController: UIViewController {
     
     func showErrorAlert(message: String? = nil) {
         let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "Close", style: .default, handler: { _ in
+        let closeAction = UIAlertAction(title: "Close", style: .default, handler: { _ in
             alert.dismiss(animated: false, completion: nil)
         })
-        alert.addAction(action)
+        let retryAction = UIAlertAction(title: "Retry", style: .default, handler: { _ in
+            alert.dismiss(animated: false, completion: {
+                self.viewModel.loadCakeList()
+            })
+        })
+        alert.addAction(closeAction)
+        alert.addAction(retryAction)
         DispatchQueue.main.async {
             self.present(alert, animated: false, completion: nil)
         }
