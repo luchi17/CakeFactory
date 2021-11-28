@@ -26,10 +26,12 @@ class CakeListViewController: UIViewController {
         
         viewModel.bindCakeListModel = { list in
             
-            guard let list = list else { return }
+            guard let list = list else {
+                self.showErrorAlert()
+                return }
+            
             let uniqueItems = Array(Set(list.items))
             let uniqueItemsSorted = uniqueItems.sorted {$0.title < $1.title}
-            
             self.cakeListModel.items = uniqueItemsSorted
             
             DispatchQueue.main.async {
@@ -42,8 +44,8 @@ class CakeListViewController: UIViewController {
  
         self.contentView.backgroundColor = .clear
         
-        updateListButton.setTitle("Update list", for: .normal)
-        updateListButton.setTitleColor(.black, for: .normal)
+        updateListButton.setTitle("Update", for: .normal)
+        updateListButton.setTitleColor(.purple, for: .normal)
         
         let itemWidth: CGFloat = view.frame.width * 0.40
         let collectionViewLayout = UICollectionViewFlowLayout()
@@ -62,6 +64,19 @@ class CakeListViewController: UIViewController {
         let cakeCollectionViewCellIdentifier = String(describing: CakeCollectionViewCell.self)
         let cakeCollectionViewCellNib = UINib(nibName: cakeCollectionViewCellIdentifier, bundle: nil)
         collectionView.register(cakeCollectionViewCellNib, forCellWithReuseIdentifier: cakeCollectionViewCellIdentifier)
+    }
+    
+    func showErrorAlert() {
+        let alert = UIAlertController(title: "Error", message: "Server error", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Close", style: .default, handler: { _ in
+            alert.dismiss(animated: false, completion: nil)
+        })
+        alert.addAction(action)
+        DispatchQueue.main.async {
+            self.present(alert, animated: false, completion: nil)
+        }
+        
+        
     }
 
 }
