@@ -8,6 +8,6 @@
 import Foundation
 
 
-class CakeListModel {
+struct CakeListModel {
     var items: [CakeItemModel] = []
 }
