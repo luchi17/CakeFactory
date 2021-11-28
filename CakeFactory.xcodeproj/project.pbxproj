@@ -8,21 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		BC2B60C0275161A600B16F28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B60BF275161A600B16F28 /* AppDelegate.swift */; };
-		BC2B60C2275161A600B16F28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B60C1275161A600B16F28 /* SceneDelegate.swift */; };
 		BC2B60C4275161A600B16F28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B60C3275161A600B16F28 /* ViewController.swift */; };
 		BC2B60C7275161A600B16F28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC2B60C5275161A600B16F28 /* Main.storyboard */; };
 		BC2B60C9275161A900B16F28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC2B60C8275161A900B16F28 /* Assets.xcassets */; };
 		BC2B60D8275164B700B16F28 /* CakeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B60D6275164B700B16F28 /* CakeCollectionViewCell.swift */; };
 		BC2B60D9275164B700B16F28 /* CakeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC2B60D7275164B700B16F28 /* CakeCollectionViewCell.xib */; };
 		BC2B60DD27516AF400B16F28 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC2B60DC27516AF400B16F28 /* SplashScreen.storyboard */; };
-		BC2B60DF27516B0500B16F28 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B60DE27516B0500B16F28 /* SplashScreenViewController.swift */; };
-		BC2B60E127516C4A00B16F28 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B60E027516C4A00B16F28 /* SplashViewModel.swift */; };
+		BC2B60F82752612500B16F28 /* CakeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B60F62752612500B16F28 /* CakeListViewController.swift */; };
+		BC2B60F92752612500B16F28 /* CakeListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC2B60F72752612500B16F28 /* CakeListViewController.xib */; };
+		BC2B60FD2752615F00B16F28 /* CakeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B60FC2752615F00B16F28 /* CakeListViewModel.swift */; };
+		BC2B6102275261BD00B16F28 /* CakeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B6101275261BD00B16F28 /* CakeListModel.swift */; };
+		BC2B6104275262A200B16F28 /* CakeItemDataOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B6103275262A200B16F28 /* CakeItemDataOut.swift */; };
+		BC2B6108275264AC00B16F28 /* CakeItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B6107275264AC00B16F28 /* CakeItemModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BC2B60BC275161A600B16F28 /* CakeFactory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CakeFactory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC2B60BF275161A600B16F28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BC2B60C1275161A600B16F28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BC2B60C3275161A600B16F28 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BC2B60C6275161A600B16F28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC2B60C8275161A900B16F28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -30,8 +32,12 @@
 		BC2B60D6275164B700B16F28 /* CakeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeCollectionViewCell.swift; sourceTree = "<group>"; };
 		BC2B60D7275164B700B16F28 /* CakeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CakeCollectionViewCell.xib; sourceTree = "<group>"; };
 		BC2B60DC27516AF400B16F28 /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
-		BC2B60DE27516B0500B16F28 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
-		BC2B60E027516C4A00B16F28 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		BC2B60F62752612500B16F28 /* CakeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeListViewController.swift; sourceTree = "<group>"; };
+		BC2B60F72752612500B16F28 /* CakeListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CakeListViewController.xib; sourceTree = "<group>"; };
+		BC2B60FC2752615F00B16F28 /* CakeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeListViewModel.swift; sourceTree = "<group>"; };
+		BC2B6101275261BD00B16F28 /* CakeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeListModel.swift; sourceTree = "<group>"; };
+		BC2B6103275262A200B16F28 /* CakeItemDataOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeItemDataOut.swift; sourceTree = "<group>"; };
+		BC2B6107275264AC00B16F28 /* CakeItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeItemModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +72,6 @@
 			children = (
 				BC2B60D5275162C600B16F28 /* Features */,
 				BC2B60BF275161A600B16F28 /* AppDelegate.swift */,
-				BC2B60C1275161A600B16F28 /* SceneDelegate.swift */,
 				BC2B60C3275161A600B16F28 /* ViewController.swift */,
 				BC2B60C5275161A600B16F28 /* Main.storyboard */,
 				BC2B60C8275161A900B16F28 /* Assets.xcassets */,
@@ -87,10 +92,7 @@
 		BC2B60E227516CFC00B16F28 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				BC2B60F027524F5600B16F28 /* Data */,
-				BC2B60EF27524F4000B16F28 /* Domain */,
 				BC2B60E727516DFA00B16F28 /* View */,
-				BC2B60E027516C4A00B16F28 /* SplashViewModel.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -98,8 +100,9 @@
 		BC2B60E327516D0800B16F28 /* CakeList */ = {
 			isa = PBXGroup;
 			children = (
-				BC2B60D6275164B700B16F28 /* CakeCollectionViewCell.swift */,
-				BC2B60D7275164B700B16F28 /* CakeCollectionViewCell.xib */,
+				BC2B60F3275260E300B16F28 /* View */,
+				BC2B60F027524F5600B16F28 /* Data */,
+				BC2B60EF27524F4000B16F28 /* Domain */,
 			);
 			path = CakeList;
 			sourceTree = "<group>";
@@ -108,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				BC2B60DC27516AF400B16F28 /* SplashScreen.storyboard */,
-				BC2B60DE27516B0500B16F28 /* SplashScreenViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -116,6 +118,8 @@
 		BC2B60EF27524F4000B16F28 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				BC2B6101275261BD00B16F28 /* CakeListModel.swift */,
+				BC2B6107275264AC00B16F28 /* CakeItemModel.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -123,8 +127,29 @@
 		BC2B60F027524F5600B16F28 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				BC2B6103275262A200B16F28 /* CakeItemDataOut.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		BC2B60F3275260E300B16F28 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BC2B60F4275260E900B16F28 /* Cell */,
+				BC2B60F62752612500B16F28 /* CakeListViewController.swift */,
+				BC2B60F72752612500B16F28 /* CakeListViewController.xib */,
+				BC2B60FC2752615F00B16F28 /* CakeListViewModel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC2B60F4275260E900B16F28 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BC2B60D6275164B700B16F28 /* CakeCollectionViewCell.swift */,
+				BC2B60D7275164B700B16F28 /* CakeCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +214,7 @@
 				BC2B60D9275164B700B16F28 /* CakeCollectionViewCell.xib in Resources */,
 				BC2B60C7275161A600B16F28 /* Main.storyboard in Resources */,
 				BC2B60DD27516AF400B16F28 /* SplashScreen.storyboard in Resources */,
+				BC2B60F92752612500B16F28 /* CakeListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,10 +227,12 @@
 			files = (
 				BC2B60C4275161A600B16F28 /* ViewController.swift in Sources */,
 				BC2B60C0275161A600B16F28 /* AppDelegate.swift in Sources */,
+				BC2B60F82752612500B16F28 /* CakeListViewController.swift in Sources */,
 				BC2B60D8275164B700B16F28 /* CakeCollectionViewCell.swift in Sources */,
-				BC2B60E127516C4A00B16F28 /* SplashViewModel.swift in Sources */,
-				BC2B60C2275161A600B16F28 /* SceneDelegate.swift in Sources */,
-				BC2B60DF27516B0500B16F28 /* SplashScreenViewController.swift in Sources */,
+				BC2B60FD2752615F00B16F28 /* CakeListViewModel.swift in Sources */,
+				BC2B6108275264AC00B16F28 /* CakeItemModel.swift in Sources */,
+				BC2B6102275261BD00B16F28 /* CakeListModel.swift in Sources */,
+				BC2B6104275262A200B16F28 /* CakeItemDataOut.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

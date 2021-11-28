@@ -16,18 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
-        self.showSplashViewController()
+        self.showInitialViewController()
         
         return true
     }
     
-    func showSplashViewController() {
-        if let window = self.window {
-            let storyboard = UIStoryboard(name: "SplashScreen", bundle: nil)
-            let viewController = storyboard.instantiateViewController(withIdentifier: "SplashScreenViewControllerId") as! SplashScreenViewController
-            window.rootViewController = viewController
-            window.makeKeyAndVisible()
-        }
+    func showInitialViewController() {
+        let cakeListVC = CakeListViewController(nibName: String(describing: CakeListViewController.self), bundle: nil)
+        let navVC = UINavigationController(rootViewController: cakeListVC)
+        navVC.modalPresentationStyle = .overFullScreen
+        window?.rootViewController = navVC
+        window?.makeKeyAndVisible()
     }
    
 }
