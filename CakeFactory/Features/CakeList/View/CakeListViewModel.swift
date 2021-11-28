@@ -10,9 +10,9 @@ import Foundation
 class CakeListViewModel: NSObject {
     
     private var cakeListManager: CakeListManagerProtocol
-    private var cakeData: CakeListModel? {
+    private var cakeListModel: CakeListModel? {
         didSet {
-            self.bindCakeListModel(cakeData)
+            self.bindCakeListModel(cakeListModel)
         }
     }
     
@@ -25,8 +25,8 @@ class CakeListViewModel: NSObject {
 
 extension CakeListViewModel: CakeListInterfaceToViewModelProtocol {
     func loadCakeList() {
-        cakeListManager.getCakeListData { cakeModel in
-            self.cakeData = cakeModel
+        cakeListManager.getCakeListData { cakeListModel in
+            self.cakeListModel = cakeListModel
         }
     }
 }
