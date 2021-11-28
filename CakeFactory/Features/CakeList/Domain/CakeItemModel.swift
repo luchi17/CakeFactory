@@ -6,17 +6,19 @@
 //
 
 import Foundation
+import UIKit
 
 struct CakeItemModel: Equatable, Hashable {
     
     static func == (lhs: CakeItemModel, rhs: CakeItemModel) -> Bool {
         return lhs.title == rhs.title &&
         lhs.description == rhs.description &&
-        lhs.image == rhs.image
+        lhs.imageUrlString == rhs.imageUrlString
     }
     
     var title: String
     var description: String
-    var image: Data?
+    var image: UIImage?
+    var imageUrlString: String
     
 }

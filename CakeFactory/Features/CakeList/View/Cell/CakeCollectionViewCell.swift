@@ -27,14 +27,29 @@ class CakeCollectionViewCell: UICollectionViewCell {
         imageView.contentMode = .scaleAspectFit
         
         titleLabel.font = UIFont(name: "GillSans-Bold", size: 13)
+        titleLabel.textAlignment = .center
     }
     
     func configureCell(model: CakeItemModel) {
         
         titleLabel.text = model.title
-        if let image = model.image {
-            imageView.image = UIImage(data: image)
+        imageView.image = getImage(from: model.imageUrlString)
+    }
+    
+    func getImage(from string: String) -> UIImage? {
+        guard let url = URL(string: string) else {
+             return nil
         }
+
+        var image: UIImage?
+        do {
+            let data = try Data(contentsOf: url, options: [])
+            image = UIImage(data: data)
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+        return image
     }
 
 }
