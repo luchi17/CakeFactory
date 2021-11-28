@@ -20,6 +20,8 @@
 		BC2B6102275261BD00B16F28 /* CakeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B6101275261BD00B16F28 /* CakeListModel.swift */; };
 		BC2B6104275262A200B16F28 /* CakeItemDataOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B6103275262A200B16F28 /* CakeItemDataOut.swift */; };
 		BC2B6108275264AC00B16F28 /* CakeItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B6107275264AC00B16F28 /* CakeItemModel.swift */; };
+		BC2B610C27540F7A00B16F28 /* CakeListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B610B27540F7A00B16F28 /* CakeListDataSource.swift */; };
+		BC2B610F2754108200B16F28 /* CakeListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B610E2754108200B16F28 /* CakeListManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		BC2B6101275261BD00B16F28 /* CakeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeListModel.swift; sourceTree = "<group>"; };
 		BC2B6103275262A200B16F28 /* CakeItemDataOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeItemDataOut.swift; sourceTree = "<group>"; };
 		BC2B6107275264AC00B16F28 /* CakeItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeItemModel.swift; sourceTree = "<group>"; };
+		BC2B610B27540F7A00B16F28 /* CakeListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeListDataSource.swift; sourceTree = "<group>"; };
+		BC2B610E2754108200B16F28 /* CakeListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CakeListManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 			children = (
 				BC2B6101275261BD00B16F28 /* CakeListModel.swift */,
 				BC2B6107275264AC00B16F28 /* CakeItemModel.swift */,
+				BC2B610E2754108200B16F28 /* CakeListManager.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				BC2B6103275262A200B16F28 /* CakeItemDataOut.swift */,
+				BC2B610B27540F7A00B16F28 /* CakeListDataSource.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -230,6 +236,8 @@
 				BC2B60F82752612500B16F28 /* CakeListViewController.swift in Sources */,
 				BC2B60D8275164B700B16F28 /* CakeCollectionViewCell.swift in Sources */,
 				BC2B60FD2752615F00B16F28 /* CakeListViewModel.swift in Sources */,
+				BC2B610F2754108200B16F28 /* CakeListManager.swift in Sources */,
+				BC2B610C27540F7A00B16F28 /* CakeListDataSource.swift in Sources */,
 				BC2B6108275264AC00B16F28 /* CakeItemModel.swift in Sources */,
 				BC2B6102275261BD00B16F28 /* CakeListModel.swift in Sources */,
 				BC2B6104275262A200B16F28 /* CakeItemDataOut.swift in Sources */,
