@@ -38,6 +38,10 @@ class CakeListViewController: UIViewController {
                 self.collectionView.reloadData()
             }
         }
+        
+        viewModel.bindServiceError = { error in
+            self.showErrorAlert(message: error.localizedDescription)
+        }
     }
     
     func configureUI() {
@@ -66,8 +70,8 @@ class CakeListViewController: UIViewController {
         collectionView.register(cakeCollectionViewCellNib, forCellWithReuseIdentifier: cakeCollectionViewCellIdentifier)
     }
     
-    func showErrorAlert() {
-        let alert = UIAlertController(title: "Error", message: "Server error", preferredStyle: .alert)
+    func showErrorAlert(message: String? = nil) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Close", style: .default, handler: { _ in
             alert.dismiss(animated: false, completion: nil)
         })
@@ -75,9 +79,12 @@ class CakeListViewController: UIViewController {
         DispatchQueue.main.async {
             self.present(alert, animated: false, completion: nil)
         }
-        
-        
     }
+    
+    @IBAction func updateListButtonTouchUpInside(_ sender: UIButton) {
+        viewModel.loadCakeList()
+    }
+    
 
 }
 

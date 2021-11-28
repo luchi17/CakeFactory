@@ -14,13 +14,12 @@ class CakeListManager: NSObject, CakeListManagerProtocol {
         self.dataSource = dataSource
     }
     
-    func getCakeListData(completion: @escaping (CakeListModel?) -> ()) {
-        self.dataSource.getCakeListData { items in
-            
-            if let items = items {
+    func getCakeListData(onSuccess: @escaping (CakeListModel) -> (), onError: @escaping (Error?) -> ()) {
+        self.dataSource.getCakeListData { itemsDataOut in
+            if let itemsDataOut = itemsDataOut {
                 var cakeItems: [CakeItemModel] = []
             
-                for itemDataOut in items {
+                for itemDataOut in itemsDataOut {
                     let cakeItem = CakeItemModel(title: itemDataOut.title,
                                                  description: itemDataOut.desc,
                                                  imageUrlString: itemDataOut.image)
@@ -28,14 +27,18 @@ class CakeListManager: NSObject, CakeListManagerProtocol {
                 }
                 
                 let cakeListModel = CakeListModel(items: cakeItems)
-                completion(cakeListModel)
+                onSuccess(cakeListModel)
             } else {
-                completion(nil)
+                onError(nil)
             }
+            
+        } onError: { error in
+            onError(error)
         }
+
     }
 }
 
 protocol CakeListManagerProtocol {
-    func getCakeListData(completion: @escaping (CakeListModel?) -> ())
+    func getCakeListData(onSuccess: @escaping (CakeListModel) -> (), onError: @escaping (Error?) -> ())
 }
