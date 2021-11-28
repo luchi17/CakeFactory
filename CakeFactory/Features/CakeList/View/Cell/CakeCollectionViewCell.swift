@@ -41,7 +41,7 @@ class CakeCollectionViewCell: UICollectionViewCell {
         
         titleLabel.text = model.title
         
-        let image = getImage(from: model.imageUrlString)
+        let image = Utils.getImage(from: model.imageUrlString)
         imageView.image = image
         
         if image != nil {
@@ -53,21 +53,4 @@ class CakeCollectionViewCell: UICollectionViewCell {
         }
         
     }
-    
-    func getImage(from string: String) -> UIImage? {
-        guard let url = URL(string: string) else {
-             return nil
-        }
-
-        var image: UIImage?
-        do {
-            let data = try Data(contentsOf: url, options: [])
-            image = UIImage(data: data)
-        }
-        catch {
-            print(error.localizedDescription)
-        }
-        return image
-    }
-
 }

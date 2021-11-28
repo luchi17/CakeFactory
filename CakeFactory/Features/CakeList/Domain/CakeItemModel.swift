@@ -18,7 +18,6 @@ struct CakeItemModel: Equatable, Hashable {
     
     var title: String
     var description: String
-    var image: UIImage?
     var imageUrlString: String
     
 }

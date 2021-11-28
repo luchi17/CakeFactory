@@ -19,7 +19,6 @@ class CakeDetailViewController: UIViewController {
         super.viewDidLoad()
         
         configureUI()
-
     }
     
     func configureUI() {
@@ -32,11 +31,16 @@ class CakeDetailViewController: UIViewController {
         subtitleLabel.font = UIFont(name: "GillSans-Bold", size: 14)
         
         imageView.contentMode = .scaleAspectFit
+        
+        setModel()
     }
     
-    func setModel(model: CakeItemModel) {
-        titleLabel.text = model.title
-        subtitleLabel.text = model.description
-        imageView.image = model.image
+    func setModel() {
+        titleLabel.text = model?.title
+        subtitleLabel.text = model?.description
+        if let imageUrlString = model?.imageUrlString {
+            imageView.image = Utils.getImage(from: imageUrlString)
+        }
+        
     }
 }

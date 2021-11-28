@@ -91,7 +91,10 @@ class CakeListViewController: UIViewController {
 extension CakeListViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let cakeItemModel = self.cakeListModel.items[indexPath.row]
+        let cakeDetailVC = CakeDetailViewController(nibName: String(describing: CakeDetailViewController.self), bundle: nil)
+        cakeDetailVC.model = cakeItemModel
+        self.navigationController?.pushViewController(cakeDetailVC, animated: false)
     }
 }
 
