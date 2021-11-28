@@ -9,10 +9,11 @@ import UIKit
 
 class CakeListViewController: UIViewController {
 
+    @IBOutlet private weak var contentView: UIView!
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var updateListButton: UIButton!
     
-    private var viewModel: CakeListInterfaceToViewModelProtocol = CakeListViewModel()
+    private var viewModel: CakeListInterfaceToViewModelProtocol = CakeListViewModel(cakeListManager: CakeListManager(dataSource: CakeListDataSource()))
     
     private var cakeListModel: CakeListModel = CakeListModel()
     
@@ -20,28 +21,35 @@ class CakeListViewController: UIViewController {
         super.viewDidLoad()
         
         configureUI()
-        
+    
         viewModel.loadCakeList()
         
         viewModel.bindCakeListModel = { list in
+            
             guard let list = list else { return }
             let uniqueItems = Array(Set(list.items))
             let uniqueItemsSorted = uniqueItems.sorted {$0.title < $1.title}
             
             self.cakeListModel.items = uniqueItemsSorted
-            self.collectionView.reloadData()
+            
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
         }
     }
     
     func configureUI() {
+ 
+        self.contentView.backgroundColor = .clear
         
         updateListButton.setTitle("Update list", for: .normal)
         updateListButton.setTitleColor(.black, for: .normal)
         
         let itemWidth: CGFloat = view.frame.width * 0.40
         let collectionViewLayout = UICollectionViewFlowLayout()
-        collectionViewLayout.itemSize = CGSize(width: itemWidth, height: 100.0)
+        collectionViewLayout.itemSize = CGSize(width: itemWidth, height: 200.0)
         collectionViewLayout.minimumLineSpacing = 15
+        collectionViewLayout.sectionInset = UIEdgeInsets(top: 15.0, left: 15.0, bottom: 15.0, right: 15.0)
         collectionViewLayout.scrollDirection = .vertical
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator = false
