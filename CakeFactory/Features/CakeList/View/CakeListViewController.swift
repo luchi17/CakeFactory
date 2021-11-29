@@ -71,6 +71,7 @@ class CakeListViewController: UIViewController {
     }
     
     func showErrorAlert(message: String? = nil) {
+        let message = message == nil ? "Server error" : message
         let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
         let closeAction = UIAlertAction(title: "Close", style: .default, handler: { _ in
             alert.dismiss(animated: false, completion: nil)
